@@ -43,35 +43,39 @@
                 <hr>
                 <form>
                     <div class="mb-3">
-                      <label for="studentInput" class="form-label">Elève:</label>
-                      <input type="text" class="form-control" id="student">
+                      <label for="studentInput" class="form-label">Nom élève:</label>
+                      <input type="text" class="form-control" id="studentName2">
+                    </div>
+                    <div class="mb-3">
+                      <label for="studentInput" class="form-label">Prénom élève:</label>
+                      <input type="text" class="form-control" id="studentFirstName2">
+                    </div>
+                    <div class="mb-3">
+                        <label for="subjectInput" class="form-label">Matière:</label>
+                        <input type="text" class="form-control" id="subject">
                     </div>
                     <div class="mb-3">
                       <label for="gradeInput" class="form-label">Note:</label>
                       <input type="text" class="form-control" id="grade">
-                    </div>
-                    <div class="mb-3">
-                      <label for="subjectInput" class="form-label">Matière:</label>
-                      <input type="text" class="form-control" id="subject">
                     </div>
                     <button type="button" id="addGradeButton" class="btn btn-outline-dark mb-3"><i class="bi bi-send"></i> Ajouter</button>
                 </form>
             </div>
             <br>
             <hr>
-            <h6 class="display-6">Sélection</h6>
+            <h6 class="display-6 mb-3">Sélection</h6>
             <hr>
-            <div class="row">
-                <div class="col mb-3">
-                        <form>
-                        <label for="studentInput">Elève :</label>
-                        <select id="studentsClass" class="form-control">
-                          <option selected>Toute la classe...</option>
-                        </select>
-                    </div>
-                    <div class="col mb-3">
+            <div class="row mb-4">
+                <div class="col">
+                    <form>
+                    <label for="studentInput">Elève :</label>
+                    <select class="form-select" id="studentsClass">
+                        <option selected>Toute la classe...</option>
+                    </select>
+                </div>
+                    <div class="col">
                         <label for="subjectInput">Matière :</label>
-                        <select id="subjectsClass" class="form-control">
+                        <select class="form-select" id="subjectsClass">
                           <option selected>Toutes les matières...</option>
                         </select>
                     </form>
@@ -79,8 +83,22 @@
                 </div>
             <br>
             <hr>
-            <h6 class="display-6">Notes</h6>
+            <h6 class="display-6 mb-3">Notes</h6>
             <hr>
+            <!--Table-->
+            <div class="jumbotron">
+                <table class="table table-light table-striped">
+                    <thead class="text-center">
+                        <tr>
+                        <th scope="col">Nom</th>
+                        <th scope="col">Prenom</th>
+                        <th scope="col">Matière</th>
+                        <th scope="col">Note</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table" class="text-center"></tbody>
+                </table>
+            </div>
         </div>
     </div>
 
